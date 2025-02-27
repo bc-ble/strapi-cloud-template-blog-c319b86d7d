@@ -1,5 +1,19 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface CardsGlobeCard extends Struct.ComponentSchema {
+  collectionName: 'components_cards_globe_cards';
+  info: {
+    description: '';
+    displayName: 'Globe_Card';
+    icon: 'dashboard';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    span: Schema.Attribute.Enumeration<['one', 'two', 'three']>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
